@@ -39,6 +39,9 @@ public class GamePlay {
                     Config.GameFlag = false;
 
                 }
+                if (bird.imageView.getY()<-50 || bird.imageView.getY()>720) {
+                    Config.GameFlag=false; 
+                }
                 if (bird.imageView.getX() > obstacle.imageViewUp.getX() && flag) {
                     flag = false;
                     Config.score++;
@@ -58,7 +61,7 @@ public class GamePlay {
     }
 
     static boolean isCollision(ImageView bird, ImageView piller) {
-        if (bird.getY() < piller.getY() + 550 && bird.getY() >= piller.getY() && bird.getX() < piller.getX() + 100 && bird.getX() > piller.getX() - 10) {
+        if (bird.getY() < piller.getY() + 580 && bird.getY() >= piller.getY()-30 && bird.getX() < piller.getX() + 100 && bird.getX() > piller.getX() - 30) {
             //System.out.println("bird x ="+ bird.getX() +"bird y="+ bird.getY());
             //System.out.println("piler x ="+ piller.getX() +"piller y="+ piller.getY());
 

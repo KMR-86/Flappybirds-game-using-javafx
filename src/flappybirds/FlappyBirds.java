@@ -28,8 +28,8 @@ public class FlappyBirds extends Application {
         
         
         Scene scene = new Scene(root,Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT);
-
-        GamePlay game=new GamePlay(scene, root);
+        UI ui=new UI(scene, root);
+        
         primaryStage.setScene(scene);
         primaryStage.show();
     }

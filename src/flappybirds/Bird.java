@@ -44,9 +44,9 @@ public class Bird {
                     time++;
                     imageView.setY(imageView.getY() - 5 * time + .49 * time * time);
                     //System.out.println("y is " + imageView.getY());
-                    if (imageView.getY() > 600) {
+                    if (imageView.getY() > 760) {
                         birdJumpLoop.stop();
-                        imageView.setY(600);
+                        imageView.setY(760);
                         time = 0;
                     }
                 }
