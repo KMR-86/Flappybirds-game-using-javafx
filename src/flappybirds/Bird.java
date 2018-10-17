@@ -17,6 +17,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import javax.xml.stream.EventFilter;
 
 /**
  *
@@ -30,11 +31,7 @@ public class Bird {
     int time = 0;
 
     public Bird(Scene scene, Pane root) {
-        imageView.setX(100);
-        imageView.setY(600);
-        imageView.setFitHeight(50);
-        imageView.setFitWidth(50);
-        root.getChildren().add(imageView);
+
         birdJumpLoop = new Timeline(new KeyFrame(Duration.millis(50), new EventHandler<ActionEvent>() {
 
             @Override
@@ -71,6 +68,15 @@ public class Bird {
             }
 
         });
+
+    }
+
+    void init(Scene scene, Pane root) {
+        imageView.setX(100);
+        imageView.setY(600);
+        imageView.setFitHeight(50);
+        imageView.setFitWidth(50);
+        root.getChildren().add(imageView);
     }
 
 }

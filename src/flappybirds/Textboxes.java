@@ -24,6 +24,10 @@ public class Textboxes {
         text.prefWidth(sizeY);
         text.setStyle("-fx-font: " + fontSize + " arial;");
         text.setFill(Color.BLACK);
+        
+    }
+    void init(Scene scene,Pane root){
         root.getChildren().add(text);
+    
     }
 }

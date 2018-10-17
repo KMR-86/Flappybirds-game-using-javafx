@@ -30,18 +30,6 @@ public class BackGround {
     public static Timeline BackGroundLoop;
 
     public BackGround(Scene scene, Pane root) {
-        imageView.setFitHeight(Config.SCREEN_HEIGHT);
-        imageView.setFitWidth(Config.SCREEN_WIDTH);
-        imageView2.setFitHeight(Config.SCREEN_HEIGHT);
-        imageView2.setFitWidth(Config.SCREEN_WIDTH);
-        imageView.setX(0);
-        imageView.setY(0);
-        imageView2.setX(960);
-        imageView2.setY(0);
-
-        root.getChildren().add(imageView);
-        root.getChildren().add(imageView2);
-
         BackGroundLoop = new Timeline(new KeyFrame(Duration.millis(3), new EventHandler<ActionEvent>() {
 
             @Override
@@ -65,6 +53,21 @@ public class BackGround {
                 }
             }
         }));
+
+    }
+
+    void init(Scene scene, Pane root) {
+        imageView.setFitHeight(Config.SCREEN_HEIGHT);
+        imageView.setFitWidth(Config.SCREEN_WIDTH);
+        imageView2.setFitHeight(Config.SCREEN_HEIGHT);
+        imageView2.setFitWidth(Config.SCREEN_WIDTH);
+        imageView.setX(0);
+        imageView.setY(0);
+        imageView2.setX(960);
+        imageView2.setY(0);
+
+        root.getChildren().add(imageView);
+        root.getChildren().add(imageView2);
         BackGroundLoop.setCycleCount(Timeline.INDEFINITE);
         BackGroundLoop.play();
     }

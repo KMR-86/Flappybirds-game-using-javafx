@@ -29,17 +29,7 @@ public class Obstacle {
     Timeline ObstacleLoop;
 
     public Obstacle(Scene scene, Pane root) {
-        imageViewUp.setX(1200);
-        imageViewUp.setY(-240);
-        imageViewUp.setFitHeight(600);
-        imageViewUp.setFitWidth(100);
-        root.getChildren().add(imageViewUp);
 
-        imageViewDown.setX(1200);
-        imageViewDown.setY(460);
-        imageViewDown.setFitHeight(600);
-        imageViewDown.setFitWidth(100);
-        root.getChildren().add(imageViewDown);
         ObstacleLoop = new Timeline(new KeyFrame(Duration.millis(3), new EventHandler<ActionEvent>() {
 
             @Override
@@ -58,6 +48,22 @@ public class Obstacle {
                 }
             }
         }));
+
+    }
+
+    void init(Scene scene, Pane root) {
+        imageViewUp.setX(1200);
+        imageViewUp.setY(-240);
+        imageViewUp.setFitHeight(600);
+        imageViewUp.setFitWidth(100);
+        root.getChildren().add(imageViewUp);
+
+        imageViewDown.setX(1200);
+        imageViewDown.setY(460);
+        imageViewDown.setFitHeight(600);
+        imageViewDown.setFitWidth(100);
+        root.getChildren().add(imageViewDown);
+
         ObstacleLoop.setCycleCount(Timeline.INDEFINITE);
         ObstacleLoop.play();
     }

@@ -20,4 +20,6 @@ public class Config {
     public static Image image_bg = new Image(FlappyBirds.class.getResourceAsStream("/images/bg.png"));    
     public static boolean GameFlag=true;
     public static int score=0;
+    public static int i=0;
+    
 }
